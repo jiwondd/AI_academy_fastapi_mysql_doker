@@ -1,10 +1,11 @@
 import os
+import string
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 basedir = os.path.dirname(os.path.abspath(__file__))
 
 from app.services.calculator import CalculatorService
-from app.models.user import User
+from app.services.user import UserService
 def print_menu():
     print("0. 전체프로그램 종료")
     print("1. 계산기 프로그램")
@@ -24,7 +25,12 @@ def main(): #메소드
             first=int(input('첫번째값:'))
             second=int(input('두번째값:'))
             calculatorservice.calculate(first,second)
-            
+
+        elif menu=='2':
+            userservice=UserService()
+            id=string(input('ID:'))
+            password=int(input('PASSWORD:'))
+            userservice.user(id,password)       
 
 
 

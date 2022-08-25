@@ -28,8 +28,8 @@ def main(): #메소드
 
         elif menu=='2':
             userservice=UserService()
-            id=string(input('ID:'))
-            password=int(input('PASSWORD:'))
+            id=input('ID:')
+            password=input('PASSWORD:')
             userservice.user(id,password)       
 
 

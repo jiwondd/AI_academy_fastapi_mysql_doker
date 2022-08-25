@@ -8,6 +8,3 @@ class UserService(object):
         user=User(id,password) #지역변수
         print(f'ID:{user.id}')
         print(f'PASSWORD:{user.password}')
-        print(f'{user.id()}')
-        print(f'{user.password()}')
-        

@@ -10,6 +10,7 @@ from app.services.grade import GradeService
 from app.services.score import ScoreService
 from app.services.pandas_quiz import PandasQuiz01
 from app.services.pandas02 import PandasQuiz02
+from app.services.pandas03 import PandasQuiz03
 
 def print_menu():
     print("0. 전체프로그램 종료")
@@ -19,6 +20,7 @@ def print_menu():
     print("4. 성적표 프로그램2")
     print("5. pandas quiz")
     print("6. pandas quiz2")
+    print("7. pandas quiz3")
     menu=input('메뉴선택')
     return menu
 
@@ -86,6 +88,15 @@ def main(): #메소드
                     break
                 elif secon_quiz=='1':
                     quiz2.quiz2()
+                    
+        elif menu=='7':
+            quiz2=PandasQuiz03()
+            while 2:
+                secon_quiz=input('퀴즈번호 선택. 종료는 0:')
+                if secon_quiz == '0':
+                    break
+                elif secon_quiz=='1':
+                    quiz2.quiz3()
                 
                     
             
